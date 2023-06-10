@@ -16,6 +16,7 @@
                             <th class="px-6 py-3">Author E-mail</th>
                             <th class="px-6 py-3">Author Address</th>
                             <th class="px-6 py-3">Author Phone</th>
+                            <th class="px-6 py-3">Action</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -26,6 +27,7 @@
                             <td>{{$author->author_email}}</td>
                             <td>{{$author->author_address}}</td>
                             <td>{{$author->author_phone}}</td>
+                            <td class="cursor" wire:click="edit({{$author->id}})"> Edit</td>
                         </tr>
                         @endforeach
                     </tbody>
