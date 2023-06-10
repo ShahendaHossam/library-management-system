@@ -9,6 +9,7 @@ use Livewire\Component;
 class AuthorForm extends Component
 {
     public Author $author;
+    public $editMode = false;
 
     protected $rules = [
         'author.author_name' => 'nullable|max:255',
@@ -26,8 +27,11 @@ class AuthorForm extends Component
     }
 
     public function mount(){
-    $this->author = new Author();
-
+        if(isset($this->author->id)){
+            $this->editMode = true;
+        }else{
+            $this->author = new Author();
+        }
     }
 
     public function render()
