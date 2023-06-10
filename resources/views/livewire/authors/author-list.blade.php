@@ -19,11 +19,15 @@
                         </tr>
                     </thead>
                     <tbody>
-
+                        @foreach($authors as $author)
                         <tr class="bg-white border-b bg-gray-100 border-gray-200 hover:bg-gray-50 hover:bg-gray-300">  
-                            <td></td>
+                            <td>{{$author->id}}</td>
+                            <td>{{$author->author_name}}</td>
+                            <td>{{$author->author_email}}</td>
+                            <td>{{$author->author_address}}</td>
+                            <td>{{$author->author_phone}}</td>
                         </tr>
-
+                        @endforeach
                     </tbody>
                 </table>
             </div>
