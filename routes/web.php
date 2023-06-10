@@ -21,6 +21,8 @@ Route::get('/', function () {
 
 Route::get('author', AuthorList::class)->name('author.index');
 Route::get('author/create', AuthorForm::class)->name('author.create');
+Route::get('author/{author}/edit', AuthorForm::class)->name('author.edit');
+
 
 
 Route::middleware([
