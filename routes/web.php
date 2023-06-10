@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Livewire\Authors\AuthorList;
+use App\Http\Livewire\Authors\AuthorForm;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,6 +18,10 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('author', AuthorList::class)->name('author.index');
+Route::get('author/create', AuthorForm::class)->name('author.create');
+
 
 Route::middleware([
     'auth:sanctum',
