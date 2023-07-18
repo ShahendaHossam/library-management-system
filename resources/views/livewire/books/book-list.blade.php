@@ -16,6 +16,7 @@
                             <th class="px-6 py-3">Category Name</th>
                             <th class="px-6 py-3">Author Name</th>
                             <th class="px-6 py-3">Publisher Name</th>
+                            <th class="px-6 py-3">Status</th>
                             <th class="px-6 py-3">Action</th>
                         </tr>
                     </thead>
@@ -24,9 +25,10 @@
                         <tr class="bg-white border-b bg-gray-100 border-gray-200 hover:bg-gray-50 hover:bg-gray-300">  
                             <td>{{$book->id}}</td>
                             <td>{{$book->book_name}}</td>
-                            <td>{{$book->book_email}}</td>
-                            <td>{{$book->book_address}}</td>
-                            <td>{{$book->book_phone}}</td>
+                            <td>{{$book->category ? $book->category->category_name :$book->category->id}}</td>
+                            <td>{{$book->author ? $book->author->author_name :$book->author->id}}</td>
+                            <td>{{$book->publisher ? $book->publisher->publisher_name :$book->publisher->id}}</td>
+                            <td>{{$book->status}}</td>
                             <td class="cursor" wire:click="edit({{$book->id}})"> Edit</td>
                         </tr>
                         @endforeach
