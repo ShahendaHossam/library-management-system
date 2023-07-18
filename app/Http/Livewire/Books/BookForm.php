@@ -26,6 +26,7 @@ class BookForm extends Component
         $this->validate();
         $users = Auth::user();
         $this->book->user_id = $users->id;
+        $this->book->status = 'Available';
         $this->book->save();
         return redirect()->route('book.index');
     }
