@@ -8,6 +8,8 @@ use App\Http\Livewire\Categories\CategoryList;
 use App\Http\Livewire\Categories\CategoryForm;
 use App\Http\Livewire\Publishers\PublisherList;
 use App\Http\Livewire\Publishers\PublisherForm;
+use App\Http\Livewire\Students\StudentForm;
+use App\Http\Livewire\Students\StudentList;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -40,6 +42,10 @@ Route::get('category/{category}/edit', CategoryForm::class)->name('category.edit
 Route::get('book', BookList::class)->name('book.index');
 Route::get('book/create', BookForm::class)->name('book.create');
 Route::get('book/{book}/edit', BookForm::class)->name('book.edit');
+
+Route::get('student', StudentList::class)->name('student.index');
+Route::get('student/create', StudentForm::class)->name('student.create');
+Route::get('student/{student}/edit', StudentForm::class)->name('student.edit');
 
 
 Route::middleware([
