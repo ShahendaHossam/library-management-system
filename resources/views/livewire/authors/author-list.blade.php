@@ -1,6 +1,6 @@
 <div>
     <div class="w-full py-4 text-center bg-white border border-gray-200 rounded-lg shadow sm:p-8 bg-gray-800 border-gray-700">
-        <h5 class="mb-2 text-3xl font-bold text-gray-900 pb-4">{{ __('Author List') }}</h5>
+        <h5 class="mb-2 text-3xl font-bold text-gray-900 pb-4">{{ __('Authors List') }}</h5>
         <div class="items-center justify-center space-y-4 sm:flex sm:space-y-0 sm:space-x-4">
             <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
                 <table class="w-full text-sm text-left text-gray-500 text-gray-400">
