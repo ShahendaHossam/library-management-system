@@ -17,9 +17,6 @@ class BookIssueForm extends Component
     protected $rules = [
         'book_issue.student_id' => 'nullable|max:255',
         'book_issue.book_id' => 'nullable|max:255',
-        'book_issue.phone' => 'nullable|max:255',
-        'book_issue.email' => 'nullable|max:255',
-        'book_issue.issue_date' => 'nullable|max:255',
         'book_issue.return_date' => 'nullable|max:255',
         'book_issue.status' => 'nullable|max:255',
     ];
@@ -30,13 +27,6 @@ class BookIssueForm extends Component
         $users = Auth::user();
         $this->book_issue->user_id = $users->id;
         $this->book_issue->status = 'Issued';
-
-        dd($this->student->phone);
-
-        // if($this->book_issue->student_id){
-        //     $this->book_issue->phone = $this->student->phone;
-        //     $this->book_issue->email = $this->student->email;
-        // }
 
         $this->book_issue->save();
         return redirect()->route('book_issue.index');
