@@ -2,6 +2,8 @@
 
 use App\Http\Livewire\Authors\AuthorList;
 use App\Http\Livewire\Authors\AuthorForm;
+use App\Http\Livewire\BookIssues\BookIssueForm;
+use App\Http\Livewire\BookIssues\BookIssueList;
 use App\Http\Livewire\Books\BookForm;
 use App\Http\Livewire\Books\BookList;
 use App\Http\Livewire\Categories\CategoryList;
@@ -46,6 +48,10 @@ Route::get('book/{book}/edit', BookForm::class)->name('book.edit');
 Route::get('student', StudentList::class)->name('student.index');
 Route::get('student/create', StudentForm::class)->name('student.create');
 Route::get('student/{student}/edit', StudentForm::class)->name('student.edit');
+
+Route::get('book_issue', BookIssueList::class)->name('book_issue.index');
+Route::get('book_issue/create', BookIssueForm::class)->name('book_issue.create');
+Route::get('book_issue/{book_issue}/edit', BookIssueForm::class)->name('book_issue.edit');
 
 
 Route::middleware([

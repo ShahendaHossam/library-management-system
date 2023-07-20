@@ -30,6 +30,9 @@
                     <x-nav-link href="{{ route('student.index') }}" :active="request()->routeIs('student.index')">
                         {{ __('Students') }}
                     </x-nav-link>
+                    <x-nav-link href="{{ route('book_issue.index') }}" :active="request()->routeIs('book_issue.index')">
+                        {{ __('Book Issues') }}
+                    </x-nav-link>
                 </div>
             </div>
 
