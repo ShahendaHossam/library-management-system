@@ -26,10 +26,10 @@
                         @foreach($book_issues as $book_issue)
                         <tr class="bg-white border-b bg-gray-100 border-gray-200 hover:bg-gray-50 hover:bg-gray-300">  
                             <td>{{$book_issue->id}}</td>
-                            <td>{{$book_issue->student_name}}</td>
-                            <td>{{$book_issue->book_name}}</td>
-                            <td>{{$book_issue->phone}}</td>
-                            <td>{{$book_issue->email}}</td>
+                            <td>{{$book_issue->student ? $book_issue->student->name :$book_issue->student->id}}</td>
+                            <td>{{$book_issue->book ? $book_issue->book->book_name :$book_issue->book->id}}</td>
+                            <td>{{$book_issue->student ? $book_issue->student->phone :$book_issue->student->id}}</td>
+                            <td>{{$book_issue->student ? $book_issue->student->email :$book_issue->student->id}}</td>
                             <td>{{$book_issue->created_at}}</td>
                             <td>{{$book_issue->return_date}}</td>
                             <td>{{$book_issue->status}}</td>
