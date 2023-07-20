@@ -156,6 +156,8 @@ return [
     */
 
     'providers' => ServiceProvider::defaultProviders()->merge([
+
+
         /*
          * Package Service Providers...
          */
@@ -170,6 +172,8 @@ return [
         App\Providers\RouteServiceProvider::class,
         App\Providers\FortifyServiceProvider::class,
         App\Providers\JetstreamServiceProvider::class,
+        LaravelFrontendPresets\ArgonPreset\ArgonPresetServiceProvider::class,
+        
     ])->toArray(),
 
     /*

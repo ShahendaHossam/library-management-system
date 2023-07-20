@@ -1,9 +1,5 @@
-import './bootstrap';
+import PerfectScrollbar from 'perfect-scrollbar';
+window.PerfectScrollbar = PerfectScrollbar;
 
-import Alpine from 'alpinejs';
-import focus from '@alpinejs/focus';
-window.Alpine = Alpine;
-
-Alpine.plugin(focus);
-
-Alpine.start();
+require('./bootstrap');
+require('./custom')
