@@ -12,14 +12,16 @@ class BookIssue extends Model
     protected $fillable = [
         'student_id',
         'book_id',
-        'phone',
-        'email',
-        'issue_date',
         'return_date',
         'status',
     ];
     public function student()
     {
         return $this->belongsTo(Student::class);
+    }
+
+    public function book()
+    {
+        return $this->belongsTo(Book::class);
     }
 }
